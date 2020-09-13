@@ -1,6 +1,6 @@
 package homelet.visual;
 
-import com.apple.eawt.Application;
+//import com.apple.eawt.Application;
 import homelet.GH.handlers.Layouter;
 import homelet.GH.handlers.Layouter.GridBagLayouter;
 import homelet.GH.handlers.Layouter.GridBagLayouter.GridConstrain.Anchor;
@@ -84,19 +84,19 @@ public class Display extends JFrame implements ExitAction{
 				e.printStackTrace();
 			}
 		}
-		// is mac
-		String OsName = System.getProperty("os.name");
-		if(OsName.contains("Mac")){
-			Image       icon_image = Pictures.get(PictureKey.ICON).image();
-			Application app        = Application.getApplication();
-			app.setAboutHandler(aboutEvent->aboutThis.showAboutGame());
-			app.disableSuddenTermination();
-			app.setQuitHandler((quitEvent, quitResponse)->{
-				onQuitGame();
-				quitResponse.performQuit();
-			});
-			app.setDockIconImage(icon_image);
-		}
+//		// is mac
+//		String OsName = System.getProperty("os.name");
+//		if(OsName.contains("Mac")){
+//			Image       icon_image = Pictures.get(PictureKey.ICON).image();
+//			Application app        = Application.getApplication();
+//			app.setAboutHandler(aboutEvent->aboutThis.showAboutGame());
+//			app.disableSuddenTermination();
+//			app.setQuitHandler((quitEvent, quitResponse)->{
+//				onQuitGame();
+//				quitResponse.performQuit();
+//			});
+//			app.setDockIconImage(icon_image);
+//		}
 		this.setIconImage(Pictures.get(PictureKey.ICON).image());
 		pack();
 	}
